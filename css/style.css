@@ -1,0 +1,249 @@
+/*Обнуление*/
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+*,*:before,*:after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+nav,footer,header,aside{display: block;}
+
+html,body{
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+input,button,textarea{font-family:inherit;}
+
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
+
+/*--------------------*/
+
+/* wrapper */
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  color: white;
+  min-height: 101vh;
+}
+
+.wrapper{
+  margin: 0 auto;
+  max-width: 1285px;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+/*--------------------*/
+
+/* heder foter  */
+
+header, footer {
+  padding: 20px 0;
+}
+
+header {
+  border-bottom: 10px solid orange;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  width: 100%;
+  margin-top: auto;
+  border-top: 10px solid orange;
+  background-color: rgba(61, 61, 61, 0.15);
+}
+
+footer .wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+footer p, footer a, footer a img {
+  font-size: 22px;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 205ms;
+}
+
+footer a img {
+  height: 30px;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+
+footer p:hover, footer a:hover {
+  color: orange;
+}
+
+footer a img:hover {
+  background-color: orange;
+}
+
+/*--------------------*/
+
+/* heder */
+
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.foto__camera {
+  color: orange;
+}
+
+.search {
+  position: relative;
+  width: 345px;
+}
+
+#foto__search__window {
+  box-sizing: border-box;
+  width: 100%;
+  outline: none;
+  padding: 10px 165px 10px 15px;
+  border: 1px solid black;
+  border-radius: 25px;
+  transition: all 200ms;
+  font-size: 1rem;
+}
+
+#foto__search__window:focus {
+  outline: none;
+  box-shadow: orange 0px 0px 12px 0px;
+}
+
+#foto__search__icon {
+  color: black;
+  position: absolute;
+  top: 25%;
+  right: 4%;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 200ms;
+}
+
+#foto__search__close {
+  position: absolute;
+  top: 25%;
+  right: 43%;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 200ms;
+}
+
+#foto__search__close:hover, #foto__search__close:active, #foto__search__icon:hover, #foto__search__icon:active {
+  color: orange;
+
+}
+#season__offer {
+  color: black;
+  position: absolute;
+  top: 30%;
+  font-size: 0.8rem;
+  right: 12%;
+  cursor: pointer;
+  transition: all 200ms;
+}
+
+#season__offer:hover {
+  color: var(--third);
+  text-decoration: underline;
+}
+
+/*--------------------*/
+
+/* main - galery */
+
+main {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  width: 100%;
+  gap: 16px;
+}
+
+.picture {
+  box-sizing: border-box;
+  width: 383px;
+  height: 223px;
+  background-position: center;
+  background-size: cover;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 3px solid white;
+}
+
+/*--------------------*/
+
+/* media styles */
+
+@media screen and (max-width: 1280px) {
+  .wrapper {
+    padding: 0 17px;
+  }
+}
+
+@media screen and (max-width:768px) {
+  .picture {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  h1 {
+    text-align: center;
+    font-size: 1.5rem;
+    width: 100%;
+  }
+  .header {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 363px) {
+  footer .wrapper {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 17px;
+  }
+}
